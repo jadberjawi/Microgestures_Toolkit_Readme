@@ -6,32 +6,59 @@ The primary aim of this toolkit is to facilitate the integration of hand microge
 ## Features
 - Hand microgestures supported
 
-
 ## Prerequisites
 Before you begin, ensure you have the following:
 - Unity 2020.3 LTS or newer.
-- Mixed Reality Toolkit (MRTK) v2.7 or higher installed in your Unity project.
+- Mixed Reality Feature Tool ( [link here](https://www.microsoft.com/en-us/download/details.aspx?id=102778) )
 - A HoloLens 2 device or emulator for testing.
 
 ## Installation
-1. **Clone or download this repository**: Get a copy of [Your Toolkit Name] and extract it.
-2. **Import into Unity**:
-    - Open your Unity project.
-    - Navigate to 'Assets' > 'Import Package' > 'Custom Package…' and select the downloaded package.
-3. **Apply MRTK Configuration**:
-    - Once imported, MRTK may require reconfiguration. Apply the recommended settings prompted by MRTK.
 
-## Setup
-1. **Add MRTK to your scene** (if not already added):
-    - Navigate to `Mixed Reality Toolkit` > `Add to Scene and Configure…` from the Unity menu.
-2. **Integrate Microgestures**:
-    - Drag and drop the `prefab` from `Assets/uReptoolkit/Prefabs` into your scene.
+## Step 1: Clone or Download the repository
 
-## Example Scene
-Check out the `ExampleScene` in `Assets/Scenes` to see microgestures in action.
+## Step 2: Create a 3D Project in Unity
+- Open Unity Hub and create a new 3D project. Name it appropriately.
 
-## Support
-For issues, questions, or contributions, please open an issue on the GitHub repository or contact [your-email@example.com].
+## Step 3: Configure Mixed Reality
+- Using the Mixed Reality Feature Tool, browse to the project you created.
+- Install the following packages from the **Mixed Reality Toolkit Section** (note: do not use MRTK3):
+  - Mixed Reality Toolkit Extensions
+  - Mixed Reality Toolkit Foundations
+  - Mixed Reality Toolkit Standard Assets
+
+## Step 4: Install the OpenXR Plugin
+- In the **Platform Support** section of the Mixed Reality Feature Tool, select the **OpenXR Plugin**.
+- Validate and import the features into your Unity project.
+
+## Step 5: Prepare the Assets Folder
+- In your Unity project, clear out everything found in the `Assets` folder.
+- Copy and paste the entire toolkit's files, or drag and drop them into the `Assets` folder.
+
+## Step 6: Configure Project Settings
+- Navigate to `Project Settings > OpenXR`.
+- Add the following to the enabled interaction profiles:
+  - Hand Interaction Profile
+  - Eye Gaze Interaction Profile
+  - Microsoft Hand Interaction Profile
+- Ensure the following are checked under **Open XR Features Groups**:
+  - Microsoft HoloLens
+- To the right side make sure these are checked:
+  - Hand Interaction Poses
+  - Hand Tracking
+
+## Step 7: Verify Artefacts and Representations
+- Check that the artefacts and representations are displaying correctly:
+  - Artefacts can be found under `Assets > uRepToolkit > Prefabs > Artefacts > AandB`.
+  - Representations are located at `Assets > uRepToolkit > Prefabs > Representations`.
+
+## Step 8: Setup MixedRealityToolkit Component
+- In the `MainScene`, ensure that the `MixedRealityToolkit` component references the MixedRealityToolkit script in the inspector.
+
+## Step 9: Configure uRepToolkit
+- Click on the `uRepToolkit` object.
+- Ensure the `uRepToolkit` script is assigned to it.
+- Here, you can assign multiple representations that will appear when running the project.
+
 
 ## Potential Risks and Solutions
 
