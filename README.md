@@ -10,6 +10,7 @@ The primary aim of this toolkit is to facilitate the integration of hand microge
 Before you begin, ensure you have the following:
 - Unity 2020.3 LTS or newer.
 - Mixed Reality Feature Tool ( [link here](https://www.microsoft.com/en-us/download/details.aspx?id=102778) )
+- Blender 4.2 or newer.
 - A HoloLens 2 device or emulator for testing.
 
 ## Installation
